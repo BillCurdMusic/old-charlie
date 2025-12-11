@@ -1,1 +1,8 @@
+export const data = {
+  name: "shuffle",
+  description: "Reshuffle the playlist (future feature)."
+};
 
+export async function execute(interaction) {
+  interaction.reply("Shuffle? Yeah, yeah… I’ll reorganize your mess later.");
+}
