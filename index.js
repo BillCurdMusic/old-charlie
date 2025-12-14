@@ -2,7 +2,7 @@ import "dotenv/config";
 import { Client, GatewayIntentBits, Partials } from "discord.js";
 import { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus, NoSubscriberBehavior } from "@discordjs/voice";
 import { OpenAI } from "openai";
-import { scanDriveForMP3s } from "./driveScanner.js";
+import { scanDriveForMP3s } from "./drivescanner.js";
 import { charliePersonality } from "./charliePersonality.js";
 import fs from "fs";
 import path from "path";
@@ -110,7 +110,7 @@ function joinChannel(message) {
 
 // PLAY A SPECIFIC TRACK
 function playSpecific(message, songName) {
-  if (!playlist.length) return message.reply("I ain't got no tracks, partner.");
+  if (!playlist.length) return message.reply("I ain't got shit to play, partner.");
 
   const match = playlist.find(t =>
     t.title.toLowerCase().includes(songName.toLowerCase())
